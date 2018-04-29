@@ -1,0 +1,41 @@
+.card { background-color: #FFD503; max-width: 150px; heigth: auto; word-wrap: break-word; }
+
+.card > button { color: #000; cursor: pointer; border: none; background-color: inherit; }
+
+.column { width: 280px; float: left; margin-left: 20px; }
+
+.column h2 { display: inline-block; margin: 20px 0 20px 60px; text-align: center; color: #fff; font-size: 30px; text-transform: uppercase; }
+
+.column > button { display: block; margin: 0 auto; padding: 3px 5px; font-family: inherit; font-size: 18px; cursor: pointer; background-color: inherit; border: none; color: #fff; }
+
+.column > button:hover { color: #FFD503; }
+
+.column .add-card { display: block; }
+
+.column .btn-delete { display: inline-block; margin: 0 5px; }
+
+body { font-family: "Kalam", cursive; margin: 0; padding: 0; }
+
+body form { margin: 30px 40px; }
+
+body form label { color: #8C0D00; text-transform: uppercase; font-weight: 700; font-size: 20px; }
+
+body form input { background: rgba(0, 0, 0, 0.4); border: none; }
+
+body form input[type=text] { color: #fff; outline: none; font-family: inherit; }
+
+body .ui-helper-hidden-accessible { display: none; }
+
+.jumbotron { background-image: url("https://images.pexels.com/photos/917479/pexels-photo-917479.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); -o-object-fit: cover; object-fit: cover; overflow: hidden; width: 100vw; height: 100vh; background-size: 100%; }
+
+.board { width: 900px; min-height: 700px; margin: 5% auto; }
+
+.board h1 { text-align: center; font-family: 'Permanent Marker', cursive; color: #8C0D00; font-size: 40px; }
+
+.board li { list-style-type: none; margin: 10px; }
+
+.board li p { text-align: center; margin: 0; font-size: 18px; }
+
+.board > button { font-family: inherit; font-size: 20px; background: inherit; border: none; cursor: pointer; color: #fff; margin: 0 370px 10px 370px; }
+
+.board > button:hover { color: #FFD503; }
