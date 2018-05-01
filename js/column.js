@@ -5,16 +5,16 @@ function Column(id, name) {
     this.element = createColumn();
 
 	function createColumn() {
-		var $column = $('<div>').addClass('column');
-		var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
-		var $columnCardList = $('<ul>').addClass('column-card-list');
-		var $columnDelete = $('<button>').addClass('btn-delete').text('x');
-		var $columnAddCard = $('<button>').addClass('add-card').text('Add a card');
+		var column = $('<div class="column"></div>');
+		var columnTitle = $('<h2 class="column-title">' + self.name + '</h2>');
+		var columnCardList = $('<ul class="card-list"></ul>');
+		var columnDelete = $('<button class="btn-delete">x</button>');
+		var columnAddCard = $('<button class="column-add-card">Add card</button>');
 
-		$columnDelete.on('click', function() {
+		columnDelete.on('click', function() {
 			self.removeColumn();
 		});
-	    $columnAddCard.click(function(event) {
+	    columnAddCard.click(function(event) {
 		    var cardName = input();
 		    $.ajaxSetup({
 				headers: myHeaders
@@ -33,18 +33,18 @@ function Column(id, name) {
 			});
 		});
 
-	    $column.append($columnTitle)
-	        .append($columnDelete)
-	        .append($columnAddCard)
-	        .append($columnCardList);
+	    column.append(columnTitle)
+	        .append(columnDelete)
+	        .append(columnAddCard)
+	        .append(columnCardList);
 
-			return $column;
+			return column;
 	}
 }
 
 Column.prototype = {
-	addCard: function(card) {
-	  this.$element.children('ul').append(card.$element);
+	createCard: function(card) {
+	  this.element.children('ul').append(card.element);
 	},
 	removeColumn: function() {
 	   var self = this;
